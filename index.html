@@ -1,95 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>picShow</title>
-		<style>
-			body{
-				font-family: "Helvetica","Arial",serif;
-				color: #333;
-				background-color: #ccc;
-				margin: 15px 10%;
-			}
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nicora New Web</title>
+<link rel="stylesheet" type="text/css" href="nicora.css" />
+</head>
 
-			h1{
-				color: #333;
-				background-color: transparent;
-			}
+<body>
+<img src="jiji.png" width="1200" height="189.6" alt="This is the banner"/>
 
-			a{
-				color: #c60;
-				background-color: transparent;
-				font-weight: bold;
-				text-decoration: none;
-			}
+<ul id="nav">
+	<li><a href="index.html">New Arrivals </a>
+	<ul>
+		<li><a href="https://nicorashoes.com">Women</a></li>
+		<li><a href="https://nicorashoes.com">Men</a></li>
+		<li><a href="https://nicorashoes.com">Everyone</a></li>
+	</ul>
+	</li>
+	<li><a href="https://nicorashoes.com/">Nicora Women</a>
+	<ul>
+		<li><a href="https://nicorashoes.com">All</a></li>
+		<li><a href="https://nicorashoes.com">Boots</a></li>
+		<li><a href="https://nicorashoes.com">Flats</a></li>
+		<li><a href="https://nicorashoes.com">Sandals</a></li>
+		<li><a href="https://nicorashoes.com">Accessories</a></li>
+	</ul>
+	</li>
+	<li><a href="https://nicorashoes.com/">Nicora Men</a>
+	<ul>
+		<li><a href="https://nicorashoes.com">All</a></li>
+		<li><a href="https://nicorashoes.com">Boots</a></li>
+	    <li><a href="https://nicorashoes.com">Oxfords</a></li>
+	</ul>
+	</li>
+	<li><a href="https://nicorashoes.com/">Everyone</a>
+	<ul>
+	    <li><a href="https://nicorashoes.com">All</a></li>
+	    <li><a href="https://nicorashoes.com">Boots</a></li>
+	    <li><a href="https://nicorashoes.com">Flats</a></li>
+	</ul>
+	</li>
+	<li><a href="https://nicorashoes.com/">Sales</a>
+	<ul>
+	    <li><a href="https://nicorashoes.com">Women</a></li>
+	    <li><a href="https://nicorashoes.com">Men</a></li>
+	    <li><a href="https://nicorashoes.com">Everyone</a></li>
+	</ul>
+	</li>
+	<li><a href="https://nicorashoes.com/">About</a>
+	<ul>
+		<li><a href="https://nicorashoes.com">Meet Nicora</a></li>
+		<li><a href="https://nicorashoes.com">Press</a></li>
+		<li><a href="https://nicorashoes.com">Nicora Blog</a></li>
+	</ul>
+	</li>
+	
+</ul>
 
-			ul{
-				padding: 0;
-			}
 
-			li{
-				float: left;
-				padding: 1em;
-				list-style: none;
-			}
-
-			img{
-				display: block;
-				clear: both;
-			}
-
-			#img{
-				list-style: none;
-			}
-			#img li{
-				display:inline;
-			}
-			#holder {
-				height: 455px;
-				width: 256px;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Show Pictures</h1>
-		<ul id="img">
-			<li>
-				<a name="img/1.jpg" title="picture 1">1</a>
-			</li>
-			<li>
-				<a name="img/2.jpg" title="picture 2">2</a>
-			</li>
-			<li>
-				<a name="img/3.jpg" title="picture 3">3</a>
-			</li>
-		</ul>
-		<img id="holder" src="img/4.jpg" alt="picure 8" />
-		<p id="description">Choose a picture.</p>
-	</body>
-	<script type="text/javascript">
-	var img = document.getElementById('img')
-	var links = img.getElementsByTagName('a')
-	// 得到这两个DOM对象
-	// 其中img是个DOM对象，因为getElementById返回一个DOM对象
-	// 而links是个数组，因为getElementsByTagName返回一个DOM对象组成的数组
-	for (var i = 0; i < links.length; i++) {
-		// 遍历links绑定onclick点击事件到DOM节点上
-		links[i].onclick = function(){
-			showPic(this)
-			// 在绑定到DOM元素的事件函数中，this相当于该DOM元素
-			// 将该DOM元素作为参数执行showPic函数
-		}
-	}
-
-	function showPic (whichPic) {
-		// 声明showPic函数，函数参数为whichPic
-		var source = whichPic.getAttribute('name');
-		var holder = document.getElementById('holder');
-		holder.setAttribute('src',source);
-		var text = whichPic.getAttribute('title');
-		var description = document.getElementById('description');
-		description.firstChild.nodeValue = text;
-		// 执行DOM操作
-	}
-	</script>
+</body>
 </html>
